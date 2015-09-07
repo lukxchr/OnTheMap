@@ -62,7 +62,8 @@ class InformationPostingViewController: UIViewController, UITextFieldDelegate {
             
             let newAnnotation = MKPlacemark(placemark: placemark)
             self.mapView?.addAnnotation(newAnnotation)
-            self.mapView?.showAnnotations([newAnnotation], animated: true)
+            let region = MKCoordinateRegion(center: newAnnotation.coordinate, span: MKCoordinateSpan(latitudeDelta: 1.0, longitudeDelta: 1.0))
+            self.mapView.setRegion(region, animated: true)
             self.configureUIForStepTwo()
         }
     }

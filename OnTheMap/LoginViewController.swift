@@ -16,10 +16,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //usernameTextField.becomeFirstResponder()
-        //MARK: debug
-        usernameTextField.text = "6abstruse@gmail.com"
-        passwordTextField.text = "450Wox"
 
         usernameTextField.delegate = self
         passwordTextField.delegate = self
